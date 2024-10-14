@@ -76,7 +76,7 @@
         }
 
         /* Add this class when the content is visible */
-        .container-2.visible, .container.visible, .container-3.visible {
+        .container-2.visible, .container.visible, .container-3.visible, .finisher.visible {
             opacity: 1; /* Full opacity when visible */
         }
 
@@ -215,15 +215,15 @@
         }
 
         .bottom-box {
-      background-color: #232323;  /* Background color */
-      height: 2500px;  /* Adjustable height */
-      width: 100%;  /* Full width */
-      position: absolute;  /* Positioned relative to the entire page */
-      top: 1500px;  /* Adjust based on your page content */
-      bottom: 0;
-      z-index: 1; /* Lower z-index to place it behind lines */
-      opacity: 100%;
-    }
+            background-color: #232323;  /* Background color */
+            height: 2500px;  /* Adjustable height */
+            width: 100%;  /* Full width */
+            position: absolute;  /* Positioned relative to the entire page */
+            top: 1500px;  /* Adjust based on your page content */
+            bottom: 0;
+            z-index: 1; /* Lower z-index to place it behind lines */
+            opacity: 100%;
+        }
     </style>
 </head>
 <body>
@@ -246,7 +246,7 @@
             <ul>
                 <li>Lack of inclusivity for the visually challenged in the public transport sector.</li>
                 <li>Lack of dignity.</li>
-                <li>No proper accessibility integration. </li>
+                <li>No proper accessibility integration.</li>
                 <li>No equal opportunity</li>
             </ul>
         </div>
@@ -265,8 +265,7 @@
                 <li>Customized Route Planning: Users can plan routes by inputting their destination. The app considers user preferences and accessibility features to provide optimized travel plans.</li>
                 <li>Accessible Bus Stop Information: Detailed information about nearby bus stops, including names, routes, schedules, and accessibility features, helps users find the best stops.</li>
                 <li>Real-Time Bus Tracking: Stay informed about bus arrivals and departures with SAHAYAK's live tracking feature, ensuring users never miss their bus.</li>
-                <li>User-Friendly Interface: The app's interface is designed with large buttons, high contrast colors, and customizable settings for accessibility.</li>
-                <li>SAHAYAK offers independence, confidence, and convenience for visually impaired individuals in their daily travels.</li>
+                <li>User-Friendly Interface: The app's interface is designed with large buttons, high contrast colors, and customizable settings, making it easy to navigate for visually impaired users.</li>
             </ul>
         </div>
 
@@ -275,15 +274,15 @@
         </div>
     </div>
 
-    <img src="screens.png" class="finisher" alt="">
+    <img src="screens.png" class="finisher" alt="Final Image">
 
-    <a href="index.html">
+    <a href="homepage.html">
         <img src="yellow arrow.png" class="gobackboi" alt="Click to go to another page">
     </a>
 
-    <div class="bottom-box"></div>
-
     <div class="empty-space"></div>
+
+    <div class="bottom-box"></div> <!-- Added bottom box -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -292,7 +291,7 @@
                 return rect.top >= 0 && rect.bottom <= window.innerHeight;
             }
 
-            const sections = document.querySelectorAll('.container-2, .container, .container-3, .finisher, .gobackboi, bottom-box');
+            const sections = document.querySelectorAll('.container-2, .container, .container-3, .finisher');
 
             window.addEventListener('scroll', function() {
                 sections.forEach(function(section) {
